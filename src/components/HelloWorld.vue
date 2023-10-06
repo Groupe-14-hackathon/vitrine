@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="team-pres">
-      <h1 style="font-weight: bold;">Présentation du Projet</h1>
+      <h1 class="title" style="font-weight: bold;">Présentation du Projet</h1>
       <div class="pres-container">
         <img src="/src/assets/imgYFest.png" class="pres-image">
         <p class="presProjet">Notre projet vise à créer une expérience en ligne immersive pour les amateurs de festivals, offrant un aperçu complet des événements musicaux à venir au cours des prochains jours, semaines et mois. Sur notre plateforme, les passionnés de musique pourront explorer en détail chaque festival, découvrir tous les artistes qui s'y produiront, et même réserver leurs billets en ligne en toute simplicité. Notre objectif est de faciliter la planification de vos sorties musicales, de mettre en avant les talents artistiques, et de vous offrir un accès rapide et pratique à l'univers vibrant et passionnant des festivals.</p>
@@ -27,18 +27,18 @@
     <div class="section-container">
       <section class="team-section">
         <h3 style="font-size: 1.5em;">Fonctionnalité MVP</h3>
-        <h4>Affichage carte France avec les lieux</h4>
-        <h4>Descriptif festival, Liste des artistes présent</h4>
-        <h4>Transport (temps, prix, distance, etc....)</h4> 
-        <h4>Logement (sur le festival ou autour)</h4> 
-        <h4>Organisation du festival (Ou sont les toilettes, les bars, la bouffe, etc…)</h4> 
-        <h4>Création d’un compte, connexion+ Billetterie </h4>
+        <p class="fonct">Affichage carte France avec les lieux</p>
+        <p class="fonct">Descriptif festival, Liste des artistes présent</p>
+        <p class="fonct">Transport (temps, prix, distance, etc....)</p> 
+        <p class="fonct">Logement (sur le festival ou autour)</p> 
+        <p class="fonct">Organisation du festival (Ou sont les toilettes, les bars, la bouffe, etc…)</p> 
+        <p class="fonct">Création d’un compte, connexion+ Billetterie </p>
       </section>
       <section class="team-section">
         <h3 style="font-size: 1.5em; ">Fonctionnalité site web V2</h3>
-        <h4>Avec les artistes, leurs tournée actuelles et/ou prévu, tous leurs albums et sons</h4> 
-        <h4>Comparatif des prix pour les différents types de transport et compagnies</h4> 
-        <h4>Comparatif des prix pour les différents ébergements présents dans la ville en question</h4>
+        <p class="fonct">Avec les artistes, leurs tournée actuelles et/ou prévu, tous leurs albums et sons</p> 
+        <p class="fonct">Comparatif des prix pour les différents types de transport et compagnies</p> 
+        <p class="fonct">Comparatif des prix pour les différents ébergements présents dans la ville en question</p>
       </section>
     </div>
   </div>
@@ -65,6 +65,7 @@ export default {
 /* Ajoutez vos styles CSS ici */
 .pres-container{
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 .pres-image{
@@ -121,8 +122,35 @@ export default {
   width: 100%;
 }
   @media screen and (max-width : 900px) {
-  .press-container {
+  .pres-container {
+    margin-top: 20%;
     flex-direction: column;
   } 
+  .title{
+    font-size: 1.75em;
+  }
+  .presProjet{
+    font-size: 1em;
+    width: 80%;
+    margin-left: 0;
+  }
+  .team-row{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .team-card{
+    max-width: calc(90% + 20px);
+  }
+  .member-image{
+    max-width: 80%;
+    max-height: 80%;
+  }
+  .section-container{
+    flex-direction: column;
+  }
+  .fonct{
+    font-size: 1em;
+  }
 }
 </style>
