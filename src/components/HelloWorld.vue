@@ -1,7 +1,4 @@
 <script setup>
-import amaury from "../assets/amaury.jpg";
-import tim from "../assets/tim.png";
-import manon from "../assets/manon.png";
 import logo from "../assets/imgYFest.png";
 
 const equipe = [
@@ -9,37 +6,31 @@ const equipe = [
     id: 1,
     nom: "FOLTZER Thomas",
     role: "B2 Informatique",
-    image: amaury,
   },
   {
     id: 2,
     nom: "CHEVALIER Tim",
     role: "B3 Cybersécurité",
-    image: tim,
   },
   {
     id: 3,
     nom: "RODRIGUEZ Thomas",
     role: "B3 Developpement",
-    image: amaury,
   },
   {
     id: 4,
     nom: "PIERRE Quentin",
     role: "B3 Infrastructure & SI",
-    image: amaury,
   },
   {
     id: 5,
     nom: "LE BARAZER Manon",
     role: "B2 Infomatique",
-    image: manon,
   },
   {
     id: 6,
     nom: "LYONNET Amaury",
     role: "B3 Infrastructure & SI",
-    image: amaury,
   },
 ];
 </script>
@@ -126,53 +117,6 @@ const equipe = [
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      equipe: [
-        {
-          id: 1,
-          nom: "FOLTZER Thomas",
-          role: "B2 Informatique",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 2,
-          nom: "CHEVALIER Tim",
-          role: "B3 Cybersécurité",
-          image: "/src/assets/tim.png",
-        },
-        {
-          id: 3,
-          nom: "RODRIGUEZ Thomas",
-          role: "B3 Developpement",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 4,
-          nom: "PIERRE Quentin",
-          role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 5,
-          nom: "LE BARAZER Manon",
-          role: "B2 Infomatique",
-          image: "/src/assets/manon.png",
-        },
-        {
-          id: 6,
-          nom: "LYONNET Amaury",
-          role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>
-
 <style scoped>
 /* Ajoutez vos styles CSS ici */
 .pres-container {
@@ -219,6 +163,9 @@ export default {
   border-radius: 0.8rem;
   padding: 25px;
   box-sizing: border-box;
+}
+.team-card:hover {
+  background-color: #eca99d;
 }
 @media screen and (max-width: 900px) {
   .team-card {
