@@ -1,3 +1,49 @@
+<script setup>
+import amaury from "../assets/amaury.jpg";
+import tim from "../assets/tim.png";
+import manon from "../assets/manon.png";
+import logo from "../assets/imgYFest.png";
+
+const equipe = [
+  {
+    id: 1,
+    nom: "FOLTZER Thomas",
+    role: "B2 Informatique",
+    image: amaury,
+  },
+  {
+    id: 2,
+    nom: "CHEVALIER Tim",
+    role: "B3 Cybersécurité",
+    image: tim,
+  },
+  {
+    id: 3,
+    nom: "RODRIGUEZ Thomas",
+    role: "B3 Developpement",
+    image: amaury,
+  },
+  {
+    id: 4,
+    nom: "PIERRE Quentin",
+    role: "B3 Infrastructure & SI",
+    image: amaury,
+  },
+  {
+    id: 5,
+    nom: "LE BARAZER Manon",
+    role: "B2 Infomatique",
+    image: manon,
+  },
+  {
+    id: 6,
+    nom: "LYONNET Amaury",
+    role: "B3 Infrastructure & SI",
+    image: amaury,
+  },
+];
+</script>
+
 <template>
   <div>
     <div class="team-pres">
@@ -89,31 +135,37 @@ export default {
           id: 1,
           nom: "FOLTZER Thomas",
           role: "B2 Informatique",
+          image: "/src/assets/amaury.jpg",
         },
         {
           id: 2,
           nom: "CHEVALIER Tim",
           role: "B3 Cybersécurité",
+          image: "/src/assets/tim.png",
         },
         {
           id: 3,
           nom: "RODRIGUEZ Thomas",
           role: "B3 Developpement",
+          image: "/src/assets/amaury.jpg",
         },
         {
           id: 4,
           nom: "PIERRE Quentin",
           role: "B3 Infrastructure & SI",
+          image: "/src/assets/amaury.jpg",
         },
         {
           id: 5,
           nom: "LE BARAZER Manon",
           role: "B2 Infomatique",
+          image: "/src/assets/manon.png",
         },
         {
           id: 6,
           nom: "LYONNET Amaury",
           role: "B3 Infrastructure & SI",
+          image: "/src/assets/amaury.jpg",
         },
       ],
     };
@@ -128,15 +180,18 @@ export default {
   flex-direction: row;
   align-items: center;
 }
+
 .pres-image {
   width: 40%;
   height: 40%;
 }
+
 .presProjet {
   margin-left: 10%;
   width: 50%;
   font-size: 1.25em;
 }
+
 .team-cards {
   display: flex;
   flex-direction: column;
@@ -152,7 +207,8 @@ export default {
 }
 
 .team-card {
-  flex: 1; /* Les cartes occupent un espace équitable */
+  flex: 1;
+  /* Les cartes occupent un espace équitable */
   max-width: calc(33.33% - 20px);
   cursor: pointer;
   padding: 10px;
@@ -164,9 +220,6 @@ export default {
   padding: 25px;
   box-sizing: border-box;
 }
-.team-card:hover {
-  background-color: #eea699;
-}
 @media screen and (max-width: 900px) {
   .team-card {
     width: 70%;
@@ -175,7 +228,8 @@ export default {
 }
 
 .team-card:last-child {
-  margin-right: 0; /* Pas de marge à droite pour la dernière carte de chaque ligne */
+  margin-right: 0;
+  /* Pas de marge à droite pour la dernière carte de chaque ligne */
 }
 
 .member-image {
@@ -193,34 +247,42 @@ export default {
 .team-section {
   width: 100%;
 }
+
 @media screen and (max-width: 900px) {
   .pres-container {
     margin-top: 10%;
     flex-direction: column;
   }
+
   .title {
     font-size: 1.75em;
   }
+
   .presProjet {
     font-size: 1em;
     width: 80%;
     margin-left: 0;
   }
+
   .team-row {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .team-card {
     max-width: calc(90% + 20px);
   }
+
   .member-image {
     max-width: 80%;
     max-height: 80%;
   }
+
   .section-container {
     flex-direction: column;
   }
+
   .fonct {
     font-size: 1em;
   }
