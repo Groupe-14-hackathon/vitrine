@@ -3,6 +3,10 @@
 * {
   font-family: 'Kodchasan', sans-serif;
 }
+body {
+  background-color: #FFEAE7;
+  color: black;
+}
 :root {
   line-height: 1.5;
   font-weight: 400;
@@ -90,4 +94,16 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+#line {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  justify-content: center;
+  display: flex;
+}
+.line {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 70%;
 }

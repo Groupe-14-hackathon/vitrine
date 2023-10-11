@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="team-pres">
-      <h1 class="title" style="font-weight: bold">Présentation du Projet</h1>
+      <h1 class="title" style="font-weight: bold">PRESENTATION DU PROJET</h1>
       <div class="pres-container">
         <img src="/src/assets/imgYFest.png" class="pres-image" />
         <p class="presProjet">
@@ -17,7 +17,10 @@
           passionnant des festivals.
         </p>
       </div>
-      <h2 style="font-weight: bold">Présentation de l'Équipe</h2>
+      <div id="line">
+        <div class="line"></div>
+      </div>
+      <h2 style="font-weight: bold">PRESENTATION DE L'EQUIPE</h2>
     </div>
     <div class="team-cards">
       <div class="team-row">
@@ -26,11 +29,6 @@
           :key="membre.id"
           class="team-card"
         >
-          <img
-            :src="membre.image"
-            alt="Photo de {{ membre.nom }}"
-            class="member-image"
-          />
           <h3>{{ membre.nom }}</h3>
           <p>{{ membre.role }}</p>
         </div>
@@ -41,15 +39,14 @@
           :key="membre.id"
           class="team-card"
         >
-          <img
-            :src="membre.image"
-            alt="Photo de {{ membre.nom }}"
-            class="member-image"
-          />
+          <img :src="membre.image" class="member-image" />
           <h3>{{ membre.nom }}</h3>
           <p>{{ membre.role }}</p>
         </div>
       </div>
+    </div>
+    <div id="line">
+      <div class="line"></div>
     </div>
     <div class="section-container">
       <section class="team-section">
@@ -59,8 +56,8 @@
         <p class="fonct">Transport (temps, prix, distance, etc....)</p>
         <p class="fonct">Logement (sur le festival ou autour)</p>
         <p class="fonct">
-          Organisation du festival (Ou sont les toilettes, les bars, la bouffe,
-          etc…)
+          Organisation du festival (Où sont les toilettes, les bars, la
+          nourriture, etc…)
         </p>
         <p class="fonct">Création d’un compte, connexion+ Billetterie</p>
       </section>
@@ -92,37 +89,31 @@ export default {
           id: 1,
           nom: "FOLTZER Thomas",
           role: "B2 Informatique",
-          image: "/src/assets/amaury.jpg",
         },
         {
           id: 2,
           nom: "CHEVALIER Tim",
           role: "B3 Cybersécurité",
-          image: "/src/assets/tim.png",
         },
         {
           id: 3,
           nom: "RODRIGUEZ Thomas",
           role: "B3 Developpement",
-          image: "/src/assets/amaury.jpg",
         },
         {
           id: 4,
           nom: "PIERRE Quentin",
           role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
         },
         {
           id: 5,
           nom: "LE BARAZER Manon",
           role: "B2 Infomatique",
-          image: "/src/assets/manon.png",
         },
         {
           id: 6,
           nom: "LYONNET Amaury",
           role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
         },
       ],
     };
@@ -144,7 +135,6 @@ export default {
 .presProjet {
   margin-left: 10%;
   width: 50%;
-  color: white;
   font-size: 1.25em;
 }
 .team-cards {
@@ -164,13 +154,18 @@ export default {
 .team-card {
   flex: 1; /* Les cartes occupent un espace équitable */
   max-width: calc(33.33% - 20px);
+  cursor: pointer;
   padding: 10px;
   text-align: center;
-  width: 25%;
-  background-color: #ffeae7;
+  width: 20%;
+  background-color: #ebb3a9;
+  box-shadow: 5px 5px 5px rgb(132, 131, 131);
   border-radius: 0.8rem;
   padding: 25px;
   box-sizing: border-box;
+}
+.team-card:hover {
+  background-color: #eea699;
 }
 @media screen and (max-width: 900px) {
   .team-card {
@@ -200,7 +195,7 @@ export default {
 }
 @media screen and (max-width: 900px) {
   .pres-container {
-    margin-top: 20%;
+    margin-top: 10%;
     flex-direction: column;
   }
   .title {
