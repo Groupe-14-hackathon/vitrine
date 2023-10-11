@@ -1,54 +1,78 @@
+<script setup >
+import amaury from '../assets/amaury.jpg'
+import tim from '../assets/tim.png'
+import manon from '../assets/manon.png'
+import logo from '../assets/imgYFest.png'
+
+const equipe = [
+  {
+    id: 1,
+    nom: "FOLTZER Thomas",
+    role: "B2 Informatique",
+    image: amaury,
+  },
+  {
+    id: 2,
+    nom: "CHEVALIER Tim",
+    role: "B3 Cybersécurité",
+    image: tim,
+  },
+  {
+    id: 3,
+    nom: "RODRIGUEZ Thomas",
+    role: "B3 Developpement",
+    image: amaury,
+  },
+  {
+    id: 4,
+    nom: "PIERRE Quentin",
+    role: "B3 Infrastructure & SI",
+    image: amaury,
+  },
+  {
+    id: 5,
+    nom: "LE BARAZER Manon",
+    role: "B2 Infomatique",
+    image: manon,
+  },
+  {
+    id: 6,
+    nom: "LYONNET Amaury",
+    role: "B3 Infrastructure & SI",
+    image: amaury,
+  },
+]
+
+
+</script>
+
+
 <template>
-  <div>
-    <div class="team-pres">
-      <h1 class="title" style="font-weight: bold">Présentation du Projet</h1>
-      <div class="pres-container">
-        <img src="/src/assets/imgYFest.png" class="pres-image" />
-        <p class="presProjet">
-          Notre projet vise à créer une expérience en ligne immersive pour les
-          amateurs de festivals, offrant un aperçu complet des événements
-          musicaux à venir au cours des prochains jours, semaines et mois. Sur
-          notre plateforme, les passionnés de musique pourront explorer en
-          détail chaque festival, découvrir tous les artistes qui s'y
-          produiront, et même réserver leurs billets en ligne en toute
-          simplicité. Notre objectif est de faciliter la planification de vos
-          sorties musicales, de mettre en avant les talents artistiques, et de
-          vous offrir un accès rapide et pratique à l'univers vibrant et
-          passionnant des festivals.
-        </p>
-      </div>
-      <h2 style="font-weight: bold">Présentation de l'Équipe</h2>
+  <div class="team-pres">
+    <h1 class="title" style="font-weight: bold">Présentation du Projet</h1>
+    <div class="pres-container">
+      <img :src="logo" class="pres-image" />
+      <p class="presProjet">
+        Notre projet vise à créer une expérience en ligne immersive pour les
+        amateurs de festivals, offrant un aperçu complet des événements
+        musicaux à venir au cours des prochains jours, semaines et mois. Sur
+        notre plateforme, les passionnés de musique pourront explorer en
+        détail chaque festival, découvrir tous les artistes qui s'y
+        produiront, et même réserver leurs billets en ligne en toute
+        simplicité. Notre objectif est de faciliter la planification de vos
+        sorties musicales, de mettre en avant les talents artistiques, et de
+        vous offrir un accès rapide et pratique à l'univers vibrant et
+        passionnant des festivals.
+      </p>
     </div>
-    <div class="team-cards">
-      <div class="team-row">
-        <div
-          v-for="(membre, index) in equipe.slice(0, 3)"
-          :key="membre.id"
-          class="team-card"
-        >
-          <img
-            :src="membre.image"
-            alt="Photo de {{ membre.nom }}"
-            class="member-image"
-          />
-          <h3>{{ membre.nom }}</h3>
-          <p>{{ membre.role }}</p>
-        </div>
-      </div>
-      <div class="team-row">
-        <div
-          v-for="(membre, index) in equipe.slice(3, 6)"
-          :key="membre.id"
-          class="team-card"
-        >
-          <img
-            :src="membre.image"
-            alt="Photo de {{ membre.nom }}"
-            class="member-image"
-          />
-          <h3>{{ membre.nom }}</h3>
-          <p>{{ membre.role }}</p>
-        </div>
+    <h2 style="font-weight: bold">Présentation de l'Équipe</h2>
+  </div>
+  <div class="team-cards">
+    <div class="team-row">
+      <div v-for="membre in equipe" :key="membre.id" class="team-card">
+        <img :src="membre.image" class="member-image" />
+        <h3>{{ membre.nom }}</h3>
+        <p>{{ membre.role }}</p>
       </div>
     </div>
     <div class="section-container">
@@ -82,54 +106,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      equipe: [
-        {
-          id: 1,
-          nom: "FOLTZER Thomas",
-          role: "B2 Informatique",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 2,
-          nom: "CHEVALIER Tim",
-          role: "B3 Cybersécurité",
-          image: "/src/assets/tim.png",
-        },
-        {
-          id: 3,
-          nom: "RODRIGUEZ Thomas",
-          role: "B3 Developpement",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 4,
-          nom: "PIERRE Quentin",
-          role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
-        },
-        {
-          id: 5,
-          nom: "LE BARAZER Manon",
-          role: "B2 Infomatique",
-          image: "/src/assets/manon.png",
-        },
-        {
-          id: 6,
-          nom: "LYONNET Amaury",
-          role: "B3 Infrastructure & SI",
-          image: "/src/assets/amaury.jpg",
-        },
-      ],
-    };
-  },
-};
-</script>
-
 <style scoped>
 /* Ajoutez vos styles CSS ici */
 .pres-container {
@@ -137,16 +113,19 @@ export default {
   flex-direction: row;
   align-items: center;
 }
+
 .pres-image {
   width: 40%;
   height: 40%;
 }
+
 .presProjet {
   margin-left: 10%;
   width: 50%;
   color: white;
   font-size: 1.25em;
 }
+
 .team-cards {
   display: flex;
   flex-direction: column;
@@ -162,7 +141,8 @@ export default {
 }
 
 .team-card {
-  flex: 1; /* Les cartes occupent un espace équitable */
+  flex: 1;
+  /* Les cartes occupent un espace équitable */
   max-width: calc(33.33% - 20px);
   padding: 10px;
   text-align: center;
@@ -172,6 +152,7 @@ export default {
   padding: 25px;
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 900px) {
   .team-card {
     width: 70%;
@@ -180,7 +161,8 @@ export default {
 }
 
 .team-card:last-child {
-  margin-right: 0; /* Pas de marge à droite pour la dernière carte de chaque ligne */
+  margin-right: 0;
+  /* Pas de marge à droite pour la dernière carte de chaque ligne */
 }
 
 .member-image {
@@ -198,34 +180,42 @@ export default {
 .team-section {
   width: 100%;
 }
+
 @media screen and (max-width: 900px) {
   .pres-container {
     margin-top: 20%;
     flex-direction: column;
   }
+
   .title {
     font-size: 1.75em;
   }
+
   .presProjet {
     font-size: 1em;
     width: 80%;
     margin-left: 0;
   }
+
   .team-row {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
+
   .team-card {
     max-width: calc(90% + 20px);
   }
+
   .member-image {
     max-width: 80%;
     max-height: 80%;
   }
+
   .section-container {
     flex-direction: column;
   }
+
   .fonct {
     font-size: 1em;
   }
