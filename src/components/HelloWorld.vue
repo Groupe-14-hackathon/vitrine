@@ -90,8 +90,6 @@ const equipe = [
         <h3 style="font-size: 1.5em">Fonctionnalité MVP</h3>
         <p class="fonct">Affichage carte France avec les lieux</p>
         <p class="fonct">Descriptif festival, Liste des artistes présent</p>
-        <p class="fonct">Transport (temps, prix, distance, etc....)</p>
-        <p class="fonct">Logement (sur le festival ou autour)</p>
         <p class="fonct">
           Organisation du festival (Où sont les toilettes, les bars, la
           nourriture, etc…)
@@ -112,8 +110,18 @@ const equipe = [
           Comparatif des prix pour les différents ébergements présents dans la
           ville en question
         </p>
+        <p class="fonct">Transport (temps, prix, distance, etc....)</p>
+        <p class="fonct">Logement (sur le festival ou autour)</p>
       </section>
     </div>
+    <div id="line">
+      <div class="line"></div>
+    </div>
+
+    <h3 style="font-size: 1.5em">LIENS IMPORTANTS</h3>
+    <a href="https://github.com/Groupe-14-hackathon"
+      >https://github.com/Groupe-14-hackathon</a
+    >
   </div>
 </template>
 
