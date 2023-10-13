@@ -122,6 +122,7 @@ const equipe = [
     <a href="https://github.com/Groupe-14-hackathon"
       >https://github.com/Groupe-14-hackathon</a
     >
+    <a href="https://yfestival.netlify.app">https://yfestival.netlify.app</a>
   </div>
 </template>
 
