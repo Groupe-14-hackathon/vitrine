@@ -107,7 +107,7 @@ const equipe = [
           compagnies
         </p>
         <p class="fonct">
-          Comparatif des prix pour les différents ébergements présents dans la
+          Comparatif des prix pour les différents hébergements présents dans la
           ville en question
         </p>
         <p class="fonct">Transport (temps, prix, distance, etc....)</p>
