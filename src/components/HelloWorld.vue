@@ -119,15 +119,24 @@ const equipe = [
     </div>
 
     <h3 style="font-size: 1.5em">LIENS IMPORTANTS</h3>
-    <a href="https://github.com/Groupe-14-hackathon"
-      >https://github.com/Groupe-14-hackathon</a
-    >
-    <a href="https://yfestival.netlify.app">https://yfestival.netlify.app</a>
+   <div class="link">
+      <a target="_blank" href="https://github.com/orgs/Groupe-14-hackathon/repositories"
+      >Github</a
+       >
+      <a target="_blank" href="https://yfestival.netlify.app">App Yfestival</a>
+   </div>
   </div>
 </template>
 
 <style scoped>
-/* Ajoutez vos styles CSS ici */
+
+.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
 .pres-container {
   display: flex;
   flex-direction: row;
